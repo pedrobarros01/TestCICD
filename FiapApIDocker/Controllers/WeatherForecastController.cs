@@ -18,7 +18,7 @@ namespace FiapApIDocker.Controllers
             var response = new List<Weather>();
             foreach (var s in Countries)
             {
-                var temperature = rng.Next(15, 35);
+                var temperature = rng.Next(0, 35);
                 response.Add(new Weather
                 {
                     Pais = s,
