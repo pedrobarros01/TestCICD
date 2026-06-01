@@ -5,6 +5,7 @@
         public string Pais { get; set; }
         public DateTime Data { get; set; }
         public int TemperatureC { get; set; }
+        public string Resumo { get; set; }
 
     }
 }

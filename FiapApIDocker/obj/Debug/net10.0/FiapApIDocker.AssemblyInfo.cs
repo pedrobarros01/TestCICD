@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FiapApIDocker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2458b8d0b318ea0d02bc9cfc7cffc0bf673e60a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9225c4c7fbd93c8adfe92c517873e9edd441f194")]
 [assembly: System.Reflection.AssemblyProductAttribute("FiapApIDocker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FiapApIDocker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

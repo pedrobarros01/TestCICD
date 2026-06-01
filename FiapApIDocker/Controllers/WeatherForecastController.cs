@@ -18,11 +18,13 @@ namespace FiapApIDocker.Controllers
             var response = new List<Weather>();
             foreach (var s in Countries)
             {
+                var temperature = rng.Next(15, 35);
                 response.Add(new Weather
                 {
                     Pais = s,
                     Data = DateTime.Now,
-                    TemperatureC = rng.Next(15, 35)
+                    TemperatureC = temperature,
+                    Resumo = ObterResumo(temperature)
                 });
             }
             return response;
@@ -37,6 +39,20 @@ namespace FiapApIDocker.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        private static string ObterResumo(int temperaturaC)
+        {
+
+            return temperaturaC switch
+            {
+
+                var temp when temp < 0 => "Congelante",
+                var temp when temp < 10 => "Frio",
+                var temp when temp < 20 => "Agradável",
+                var temp when temp < 25 => "Moderado",
+                var temp when temp < 30 => "Quente",
+                _ => "Muito Quente",
+            };
         }
     }
 }
