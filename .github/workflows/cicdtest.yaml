@@ -17,9 +17,7 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Build and Push Docker Image
-        run:
-          docker build -t drungas/drungas-api-teste:latest .
-          docker push drungas/drungas-api-teste:latest
+        run: docker build -t drungas/drungas-api-teste:latest . && docker push drungas/drungas-api-teste:latest
       
       - name: Set up kubectl
         uses: azure/k8s-set-context@v1
