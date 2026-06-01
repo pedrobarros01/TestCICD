@@ -31,5 +31,5 @@ jobs:
 
 
       - name: Esperar a implantação concluir
-        run: kubectl wait --for=condition-available deployment/fiapapipod
+        run: kubectl wait --for=condition=available deployment/fiapapipod
 
