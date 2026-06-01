@@ -29,6 +29,9 @@ jobs:
           version: 1.21.0
 
       - name: Deploy to AKS
-        run: kubectl apply -f deployment.yml
+        run: kubectl apply -f FiapApIDocker/YAMLS/deployment.yml
 
+
+      - name: Esperar a implantação concluir
+        run: kubectl wait --for=condition-available deployment/fiapapipod
 
