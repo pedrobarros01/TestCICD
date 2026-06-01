@@ -29,6 +29,9 @@ jobs:
       - name: Deploy to AKS
         run: kubectl apply -f FiapApIDocker/YAMLS/deployment.yml
 
+      - name: Restart
+        run: kubectl rollout restart deployment fiapapipod
+
 
       - name: Esperar a implantação concluir
         run: kubectl wait --for=condition=available deployment/fiapapipod
